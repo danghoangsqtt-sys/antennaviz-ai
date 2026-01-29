@@ -1,7 +1,7 @@
 {
   "name": "antennaviz-ai-advanced",
   "version": "2.0.0",
-  "main": "dist-electron/main.js", 
+  "main": "dist-electron/main.js",
   "description": "AntennaViz AI Advanced Edition",
   "scripts": {
     "dev": "vite",
@@ -31,18 +31,19 @@
     }
   },
   "dependencies": {
+    "@google/genai": "^1.38.0",
+    "@mediapipe/tasks-vision": "^0.10.32",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "electron": "^40.1.0",
+    "lucide-react": "^0.563.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "@google/genai": "^1.38.0",
-    "@react-three/fiber": "^9.5.0",
-    "@react-three/drei": "^10.7.7",
     "three": "^0.182.0",
-    "lucide-react": "^0.563.0",
-    "zustand": "^5.0.10",
-    "@mediapipe/tasks-vision": "^0.10.32",
-    "electron": "^40.1.0"
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
     "electron": "^40.1.0",
     "electron-builder": "^24.13.3",
     "typescript": "^5.0.0",
