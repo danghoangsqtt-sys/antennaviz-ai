@@ -1,13 +1,31 @@
 {
   "name": "antennaviz-ai-advanced",
   "version": "2.0.0",
-  "description": "Advanced Antenna Visualization with AI and Hand Tracking",
-  "main": "electron/main.ts",
-  "type": "module",
+  "main": "dist-electron/main.js", 
+  "description": "AntennaViz AI Advanced Edition",
   "scripts": {
-    "start": "electron .",
     "dev": "vite",
-    "build": "vite build"
+    "build": "tsc && vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.antennaviz.ai",
+    "productName": "AntennaViz AI",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "dependencies": {
     "react": "^19.2.4",
@@ -22,6 +40,8 @@
     "electron": "^40.1.0"
   },
   "devDependencies": {
+    "electron": "^40.1.0",
+    "electron-builder": "^24.13.3",
     "typescript": "^5.0.0",
     "vite": "^5.0.0",
     "vite-plugin-electron": "^0.28.0"
